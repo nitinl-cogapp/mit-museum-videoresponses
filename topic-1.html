@@ -162,6 +162,15 @@
       function showAssets(assets) {
         const assetsDiv = document.querySelector("#videowall");
         assetsDiv.className = "videowall";
+
+        if (assets.length === 0) {
+          const noAssets = document.querySelector("#videowall-header");
+          noAssets.innerText =
+            "What do you think? Be the first to give your opinion:";
+          assetsDiv.remove();
+          return;
+        }
+
         assets.forEach((asset) => {
           const assetDiv = document.createElement("div");
           assetDiv.className = "asset";
@@ -819,7 +828,10 @@
                 </p>
               </div>
             </div>
-            <h2 class="SectionHeading_section-heading___JPa_">
+            <h2
+              id="videowall-header"
+              class="SectionHeading_section-heading___JPa_"
+            >
               What do you think? See how others have responded
             </h2>
             <div id="videowall" class="col col--center-large"></div>
@@ -828,6 +840,7 @@
                 class="CallToAction_cta__nb7Yi CallToAction_cta--teal__NOuZJ"
               >
                 <h3 class="h4">Share your story with us</h3>
+                <p>Note: your video is limited to 30 seconds</p>
                 <div class="mt-1 lh-md stack submission-capture">
                   <form id="submission_step1" action="">
                     <label for="submission-title">Video title</label>

@@ -4,7 +4,10 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta charset="utf-8" />
-    <title>🚧 MIT Museum | A second interesting question?</title>
+    <title>
+      🚧 MIT Museum | What piece of technology makes a difference in your life
+      every day?
+    </title>
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <meta name="robots" content="none" />
     <meta property="og:locale" content="en_US" />
@@ -14,11 +17,17 @@
       property="og:url"
       content="https://mit-museum-frontend-git-develop-mit-museum.vercel.app/is-artificial-intelligence-a-threat-to-humans"
     />
-    <meta property="og:title" content="A second interesting question?" />
+    <meta
+      property="og:title"
+      content="What piece of technology makes a difference in your life every day?"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@mitmuseum" />
     <meta name="twitter:creator" content="@mitmuseum" />
-    <meta name="twitter:title" content="A second interesting question?" />
+    <meta
+      name="twitter:title"
+      content="What piece of technology makes a difference in your life every day?"
+    />
     <link
       href="https://mit-museum-frontend-git-develop-mit-museum.vercel.app/is-artificial-intelligence-a-threat-to-humans"
       rel="canonical"
@@ -43,10 +52,10 @@
           "creator": { "@id": "#creator" },
           "dateModified": "2022-01-12T05:30:17-05:00",
           "datePublished": "2021-12-10T06:31:00-05:00",
-          "headline": "A second interesting question?",
+          "headline": "What piece of technology makes a difference in your life every day?",
           "inLanguage": "en-us",
           "mainEntityOfPage": "https://mit-museum-frontend-git-develop-mit-museum.vercel.app/is-artificial-intelligence-a-threat-to-humans",
-          "name": "A second interesting question?",
+          "name": "What piece of technology makes a difference in your life every day?",
           "publisher": { "@id": "#creator" },
           "url": "https://mit-museum-frontend-git-develop-mit-museum.vercel.app/is-artificial-intelligence-a-threat-to-humans"
         },
@@ -74,7 +83,7 @@
             {
               "@type": "ListItem",
               "item": "https://mit-museum-frontend-git-develop-mit-museum.vercel.app/is-artificial-intelligence-a-threat-to-humans",
-              "name": "A second interesting question?",
+              "name": "What piece of technology makes a difference in your life every day?",
               "position": 2
             }
           ],
@@ -154,6 +163,15 @@
       function showAssets(assets) {
         const assetsDiv = document.querySelector("#videowall");
         assetsDiv.className = "videowall";
+
+        if (assets.length === 0) {
+          const noAssets = document.querySelector("#videowall-header");
+          noAssets.innerText =
+            "What do you think? Be the first to give your opinion:";
+          assetsDiv.remove();
+          return;
+        }
+
         assets.forEach((asset) => {
           const assetDiv = document.createElement("div");
           assetDiv.className = "asset";
@@ -767,49 +785,31 @@
                   class="Breadcrumb_breadcrumb__list-item__svHsW"
                   aria-current="page"
                 >
-                  A second interesting question?
+                  What piece of technology makes a difference in your life every
+                  day?
                 </li>
               </ol>
             </nav>
-            <h1 class="Title_title__SEYIO">A second interesting question?</h1>
+            <h1 class="Title_title__SEYIO">
+              What piece of technology makes a difference in your life every
+              day?
+            </h1>
             <div class="col col--center-small stack">
-              <div class="Intro_intro__U5Vz6">
-                Existential risk from artificial general intelligence is the
-                hypothesis that substantial progress in artificial general
-                intelligence (AGI) could someday result in human extinction or
-                some other unrecoverable global catastrophe.
-              </div>
               <div class="stack">
                 <p>
-                  The likelihood of this type of scenario is widely debated and
-                  hinges in part on differing scenarios for future progress in
-                  computer science. Once the exclusive domain of
-                  <a
-                    href="https://en.wikipedia.org/wiki/AI_takeovers_in_popular_culture"
-                    title="AI takeovers in popular culture"
-                    >science fiction</a
-                  >, concerns about superintelligence started to become
-                  mainstream in the 2010s and were popularized by public figures
-                  such as
-                  <a
-                    href="https://en.wikipedia.org/wiki/Stephen_Hawking"
-                    title="Stephen Hawking"
-                    >Stephen Hawking</a
-                  >,
-                  <a
-                    href="https://en.wikipedia.org/wiki/Bill_Gates"
-                    title="Bill Gates"
-                    >Bill Gates</a
-                  >, and
-                  <a
-                    href="https://en.wikipedia.org/wiki/Elon_Musk"
-                    title="Elon Musk"
-                    >Elon Musk</a
-                  >.
+                  The world has been enjoying the benefits of the
+                  <a href="https://ourworldindata.org/technological-progress"
+                    >technological progress</a
+                  >
+                  for a long time, but what is one piece of overlooked
+                  technology that makes your life better every day?
                 </p>
               </div>
             </div>
-            <h2 class="SectionHeading_section-heading___JPa_">
+            <h2
+              id="videowall-header"
+              class="SectionHeading_section-heading___JPa_"
+            >
               What do you think? See how others have responded
             </h2>
             <div id="videowall" class="col col--center-large"></div>
@@ -818,6 +818,7 @@
                 class="CallToAction_cta__nb7Yi CallToAction_cta--teal__NOuZJ"
               >
                 <h3 class="h4">Share your story with us</h3>
+                <p>Note: your video is limited to 30 seconds</p>
                 <div class="mt-1 lh-md stack submission-capture">
                   <form id="submission_step1" action="">
                     <label for="submission-title">Video title</label>
@@ -1210,7 +1211,7 @@
             "entry": {
               "__typename": "site_editorial_Entry",
               "id": "1466",
-              "title": "A second interesting question?",
+              "title": "What piece of technology makes a difference in your life every day?",
               "slug": "is-artificial-intelligence-a-threat-to-humans",
               "ancestors": [],
               "heroImage": [],
@@ -1267,7 +1268,7 @@
             "seo": {
               "metaTitleContainer": {
                 "title": {
-                  "title": "🚧 MIT Museum | A second interesting question?"
+                  "title": "🚧 MIT Museum | What piece of technology makes a difference in your life every day?"
                 }
               },
               "metaTagContainer": {
@@ -1293,7 +1294,7 @@
                   "property": "og:url"
                 },
                 "og:title": {
-                  "content": "A second interesting question?",
+                  "content": "What piece of technology makes a difference in your life every day?",
                   "property": "og:title"
                 },
                 "og:description": [],
@@ -1316,7 +1317,7 @@
                   "name": "twitter:creator"
                 },
                 "twitter:title": {
-                  "content": "A second interesting question?",
+                  "content": "What piece of technology makes a difference in your life every day?",
                   "name": "twitter:title"
                 },
                 "twitter:description": [],
@@ -1345,7 +1346,7 @@
                 "publisher": [],
                 "alternate": []
               },
-              "metaJsonLdContainer": "{\"mainEntityOfPage\":{\"@context\":\"http://schema.org\",\"@type\":\"WebPage\",\"author\":{\"@id\":\"#identity\"},\"copyrightHolder\":{\"@id\":\"#identity\"},\"copyrightYear\":\"2021\",\"creator\":{\"@id\":\"#creator\"},\"dateModified\":\"2022-01-12T05:30:17-05:00\",\"datePublished\":\"2021-12-10T06:31:00-05:00\",\"headline\":\"A second interesting question?\",\"inLanguage\":\"en-us\",\"mainEntityOfPage\":\"https://mit-museum-frontend-git-develop-mit-museum.vercel.app/is-artificial-intelligence-a-threat-to-humans\",\"name\":\"A second interesting question?\",\"publisher\":{\"@id\":\"#creator\"},\"url\":\"https://mit-museum-frontend-git-develop-mit-museum.vercel.app/is-artificial-intelligence-a-threat-to-humans\"},\"identity\":{\"@context\":\"http://schema.org\",\"@id\":\"#identity\",\"@type\":\"Organization\"},\"creator\":{\"@context\":\"http://schema.org\",\"@id\":\"#creator\",\"@type\":\"Organization\"},\"breadcrumbList\":{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"description\":\"Breadcrumbs list\",\"itemListElement\":[{\"@type\":\"ListItem\",\"item\":\"https://mit-museum-frontend-git-develop-mit-museum.vercel.app\",\"name\":\"Homepage\",\"position\":1},{\"@type\":\"ListItem\",\"item\":\"https://mit-museum-frontend-git-develop-mit-museum.vercel.app/is-artificial-intelligence-a-threat-to-humans\",\"name\":\"A second interesting question?\",\"position\":2}],\"name\":\"Breadcrumbs\"}}"
+              "metaJsonLdContainer": "{\"mainEntityOfPage\":{\"@context\":\"http://schema.org\",\"@type\":\"WebPage\",\"author\":{\"@id\":\"#identity\"},\"copyrightHolder\":{\"@id\":\"#identity\"},\"copyrightYear\":\"2021\",\"creator\":{\"@id\":\"#creator\"},\"dateModified\":\"2022-01-12T05:30:17-05:00\",\"datePublished\":\"2021-12-10T06:31:00-05:00\",\"headline\":\"What piece of technology makes a difference in your life every day?\",\"inLanguage\":\"en-us\",\"mainEntityOfPage\":\"https://mit-museum-frontend-git-develop-mit-museum.vercel.app/is-artificial-intelligence-a-threat-to-humans\",\"name\":\"What piece of technology makes a difference in your life every day?\",\"publisher\":{\"@id\":\"#creator\"},\"url\":\"https://mit-museum-frontend-git-develop-mit-museum.vercel.app/is-artificial-intelligence-a-threat-to-humans\"},\"identity\":{\"@context\":\"http://schema.org\",\"@id\":\"#identity\",\"@type\":\"Organization\"},\"creator\":{\"@context\":\"http://schema.org\",\"@id\":\"#creator\",\"@type\":\"Organization\"},\"breadcrumbList\":{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"description\":\"Breadcrumbs list\",\"itemListElement\":[{\"@type\":\"ListItem\",\"item\":\"https://mit-museum-frontend-git-develop-mit-museum.vercel.app\",\"name\":\"Homepage\",\"position\":1},{\"@type\":\"ListItem\",\"item\":\"https://mit-museum-frontend-git-develop-mit-museum.vercel.app/is-artificial-intelligence-a-threat-to-humans\",\"name\":\"What piece of technology makes a difference in your life every day?\",\"position\":2}],\"name\":\"Breadcrumbs\"}}"
             },
             "navNodes": [
               {
